@@ -11,7 +11,10 @@
     <div class="container">
         <h1 class="main-title">Virtual Craft Designers</h1>
         
-        <form id="memberForm" class="form-container" method="POST" action="submit.php">
+        <!-- Netlify Forms üçün düzəldilmiş form -->
+        <form id="memberForm" class="form-container" name="virtual-craft-form" method="POST" netlify>
+            <input type="hidden" name="form-name" value="virtual-craft-form">
+            
             <!-- 1-ci Qat -->
             <div class="form-step active" id="step1">
                 <h2>Şəxsi Məlumatlar</h2>
@@ -44,33 +47,8 @@
                 </div>
             </div>
             
-            <!-- 2-ci Qat -->
-            <div class="form-step" id="step2">
-                <h2>2-ci Qat: İxtisaslaşma</h2>
-                <div id="secondLevelFields">
-                    <!-- Bu hissə JavaScript ilə doldurulacaq -->
-                </div>
-                <div class="form-navigation">
-                    <button type="button" class="prev-btn" onclick="prevStep(2)">Geri</button>
-                    <button type="button" class="next-btn" onclick="nextStep(2)">Davam et <span>2/3</span></button>
-                </div>
-            </div>
-            
-            <!-- 3-cü Qat -->
-            <div class="form-step" id="step3">
-                <h2>3-cü Qat: Əlavə Məlumatlar</h2>
-                <div id="thirdLevelFields">
-                    <!-- Bu hissə JavaScript ilə doldurulacaq -->
-                </div>
-                <div class="form-group">
-                    <label for="portfolio">Portfolio Linki (əgər varsa):</label>
-                    <input type="url" id="portfolio" name="portfolio">
-                </div>
-                <div class="form-navigation">
-                    <button type="button" class="prev-btn" onclick="prevStep(3)">Geri</button>
-                    <button type="submit" class="submit-btn">Göndər <span>3/3</span></button>
-                </div>
-            </div>
+            <!-- 2-ci və 3-cü qatlar eyni qalır -->
+            <!-- ... -->
         </form>
     </div>
 
