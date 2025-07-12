@@ -100,7 +100,7 @@ function loadSecondLevelFields() {
     switch(mainField) {
         case '3d_modeling':
             html = `
-                <h3>Hansı proqram(lar) ilə işləyirsiniz?</h3>
+                <h3>Hansı proqam(lar) ilə işləyirsiniz?</h3>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="tools[]" value="Blender"> Blender</label>
                     <label><input type="checkbox" name="tools[]" value="Cinema 4D"> Cinema 4D</label>
@@ -133,7 +133,74 @@ function loadSecondLevelFields() {
             `;
             break;
             
-        // Digər sahələr üçün eyni şəkildə əlavə edilə bilər
+        case 'graphic_design':
+            html = `
+                <h3>Hansı proqram(lar) ilə işləyirsiniz?</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="tools[]" value="Adobe Photoshop"> Adobe Photoshop</label>
+                    <label><input type="checkbox" name="tools[]" value="Adobe Illustrator"> Adobe Illustrator</label>
+                    <label><input type="checkbox" name="tools[]" value="Figma"> Figma</label>
+                    <label><input type="checkbox" name="tools[]" value="Canva"> Canva</label>
+                    <label><input type="checkbox" name="tools[]" value="CorelDRAW"> CorelDRAW</label>
+                    <label><input type="checkbox" name="tools[]" value="Digər"> Digər</label>
+                </div>
+                
+                <h3>İş növü</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="work_type[]" value="Sosial media postları"> Sosial media postları</label>
+                    <label><input type="checkbox" name="work_type[]" value="Afişa və posterlər"> Afişa və posterlər</label>
+                    <label><input type="checkbox" name="work_type[]" value="Vizit kartlar"> Vizit kartlar</label>
+                    <label><input type="checkbox" name="work_type[]" value="Reklam bannerləri"> Reklam bannerləri</label>
+                    <label><input type="checkbox" name="work_type[]" value="Digər"> Digər</label>
+                </div>
+            `;
+            break;
+            
+        case 'web_design':
+            html = `
+                <h3>Hansı platformalar ilə işləyirsiniz?</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="tools[]" value="WordPress"> WordPress</label>
+                    <label><input type="checkbox" name="tools[]" value="Wix"> Wix</label>
+                    <label><input type="checkbox" name="tools[]" value="Webflow"> Webflow</label>
+                    <label><input type="checkbox" name="tools[]" value="HTML/CSS"> HTML/CSS</label>
+                    <label><input type="checkbox" name="tools[]" value="Digər"> Digər</label>
+                </div>
+                
+                <h3>Sayt növü</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="site_type[]" value="Portfolio"> Portfolio</label>
+                    <label><input type="checkbox" name="site_type[]" value="Bloq"> Bloq</label>
+                    <label><input type="checkbox" name="site_type[]" value="E-ticarət"> E-ticarət</label>
+                    <label><input type="checkbox" name="site_type[]" value="Kompaniya saytı"> Kompaniya saytı</label>
+                    <label><input type="checkbox" name="site_type[]" value="Digər"> Digər</label>
+                </div>
+            `;
+            break;
+            
+        case 'video_editing':
+            html = `
+                <h3>Hansı proqram(lar) ilə işləyirsiniz?</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="tools[]" value="Adobe Premiere Pro"> Adobe Premiere Pro</label>
+                    <label><input type="checkbox" name="tools[]" value="CapCut"> CapCut</label>
+                    <label><input type="checkbox" name="tools[]" value="DaVinci Resolve"> DaVinci Resolve</label>
+                    <label><input type="checkbox" name="tools[]" value="Final Cut Pro"> Final Cut Pro</label>
+                    <label><input type="checkbox" name="tools[]" value="Sony Vegas"> Sony Vegas</label>
+                    <label><input type="checkbox" name="tools[]" value="Digər"> Digər</label>
+                </div>
+                
+                <h3>Video növü</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="video_type[]" value="YouTube videoları"> YouTube videoları</label>
+                    <label><input type="checkbox" name="video_type[]" value="TikTok/Reels"> TikTok/Reels</label>
+                    <label><input type="checkbox" name="video_type[]" value="Reklam çarxları"> Reklam çarxları</label>
+                    <label><input type="checkbox" name="video_type[]" value="Təlim videoları"> Təlim videoları</label>
+                    <label><input type="checkbox" name="video_type[]" value="Digər"> Digər</label>
+                </div>
+            `;
+            break;
+            
         default:
             html = `<p>Bu sahə üçün suallar hazırlanmayıb.</p>`;
     }
@@ -188,7 +255,70 @@ function loadThirdLevelFields() {
             `;
             break;
             
-        // Digər sahələr üçün eyni şəkildə əlavə edilə bilər
+        case 'graphic_design':
+            html = `
+                <h3>İxtisaslaşma</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="specialization[]" value="Brend üçün tam dizayn paketi"> Brend üçün tam dizayn paketi</label>
+                    <label><input type="checkbox" name="specialization[]" value="Qrafik setlər"> Qrafik setlər</label>
+                    <label><input type="checkbox" name="specialization[]" value="İnfografika"> İnfografika</label>
+                    <label><input type="checkbox" name="specialization[]" value="Mockup-lar"> Mockup-lar</label>
+                    <label><input type="checkbox" name="specialization[]" value="Digər"> Digər</label>
+                </div>
+                
+                <h3>Çatdırılma formatı</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="delivery_format[]" value="JPG"> .JPG</label>
+                    <label><input type="checkbox" name="delivery_format[]" value="PNG"> .PNG</label>
+                    <label><input type="checkbox" name="delivery_format[]" value="AI"> .AI</label>
+                    <label><input type="checkbox" name="delivery_format[]" value="PDF"> .PDF</label>
+                    <label><input type="checkbox" name="delivery_format[]" value="Digər"> Digər</label>
+                </div>
+            `;
+            break;
+            
+        case 'web_design':
+            html = `
+                <h3>İxtisaslaşma</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="specialization[]" value="Hazır template redaktəsi"> Hazır template redaktəsi</label>
+                    <label><input type="checkbox" name="specialization[]" value="Sıfırdan dizayn + kod"> Sıfırdan dizayn + kod</label>
+                    <label><input type="checkbox" name="specialization[]" value="CMS quraşdırma və idarə"> CMS quraşdırma və idarə</label>
+                    <label><input type="checkbox" name="specialization[]" value="UI + front-end birləşməsi"> UI + front-end birləşməsi</label>
+                    <label><input type="checkbox" name="specialization[]" value="Digər"> Digər</label>
+                </div>
+                
+                <h3>Çatdırılma</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="delivery[]" value="ZIP layihə faylı"> ZIP layihə faylı</label>
+                    <label><input type="checkbox" name="delivery[]" value="Hosting bağlantısı"> Hosting bağlantısı</label>
+                    <label><input type="checkbox" name="delivery[]" value="GitHub repo"> GitHub repo</label>
+                    <label><input type="checkbox" name="delivery[]" value="Digər"> Digər</label>
+                </div>
+            `;
+            break;
+            
+        case 'video_editing':
+            html = `
+                <h3>İxtisaslaşma</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="specialization[]" value="Səs dizaynı"> Səs dizaynı</label>
+                    <label><input type="checkbox" name="specialization[]" value="Effekt əlavə etmə (VFX)"> Effekt əlavə etmə (VFX)</label>
+                    <label><input type="checkbox" name="specialization[]" value="Yazı və altyazı montajı"> Yazı və altyazı montajı</label>
+                    <label><input type="checkbox" name="specialization[]" value="Green screen işləmə"> Green screen işləmə</label>
+                    <label><input type="checkbox" name="specialization[]" value="Digər"> Digər</label>
+                </div>
+                
+                <h3>Çatdırılma</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="delivery[]" value="MP4"> .MP4</label>
+                    <label><input type="checkbox" name="delivery[]" value="MOV"> .MOV</label>
+                    <label><input type="checkbox" name="delivery[]" value="Layihə faylı"> Layihə faylı (.prproj və s.)</label>
+                    <label><input type="checkbox" name="delivery[]" value="Digər"> Digər</label>
+                </div>
+            `;
+            break;
+            
         default:
             html = `<p>Bu sahə üçün suallar hazırlanmayıb.</p>`;
     }
@@ -203,17 +333,12 @@ document.getElementById('memberForm').addEventListener('submit', function(e) {
     // Form məlumatlarını topla
     const formData = new FormData(this);
     
-    // Burada AJAX istifadə edərək formu göndərə bilərsiniz
-    // Və ya sadəcə PHP faylına göndərə bilərsiniz
-    
-    // Nümunə: fetch API istifadəsi
     fetch('submit.php', {
         method: 'POST',
         body: formData
     })
     .then(response => response.text())
     .then(data => {
-        // Uğurlu göndərilmə mesajı
         document.querySelector('.form-container').innerHTML = `
             <div class="success-message">
                 <h2>Forumu doldurduğunuz üçün təşəkkür edirik!</h2>
